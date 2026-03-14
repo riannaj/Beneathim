@@ -1,0 +1,80 @@
+.access-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.access-gate__box {
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+}
+
+.access-gate__brand {
+  font-family: 'Sports World', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--logo);
+  paint-order: stroke fill;
+  margin: 0 0 1.5rem;
+}
+
+.access-gate__label {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+}
+
+.access-gate__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.access-gate__input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+}
+
+.access-gate__input::placeholder {
+  color: var(--text-muted);
+}
+
+.access-gate__input:focus {
+  outline: none;
+  border-color: var(--text-muted);
+}
+
+.access-gate__btn {
+  padding: 0.75rem 1.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--bg);
+  background: var(--logo);
+  border: none;
+  cursor: pointer;
+}
+
+.access-gate__btn:hover {
+  opacity: 0.9;
+}
+
+.access-gate__error {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}

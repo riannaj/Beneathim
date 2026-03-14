@@ -1,0 +1,47 @@
+.app__main {
+  margin-left: 200px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__main main {
+  padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .app__main {
+    margin-left: 220px;
+  }
+}
+
+.footer {
+  padding: 2.5rem 1.5rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer__links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.footer__links a:hover {
+  opacity: 0.85;
+}
+
+.footer__copy {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}

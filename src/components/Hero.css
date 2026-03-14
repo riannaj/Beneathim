@@ -1,0 +1,28 @@
+.hero {
+  padding: 8rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.hero__title {
+  font-family: 'Sports World', sans-serif;
+  font-size: clamp(1.5rem, 6vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.5rem;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--text);
+  paint-order: stroke fill;
+  text-align: center;
+}
+
+.hero__subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 9rem 2rem 4rem;
+  }
+}

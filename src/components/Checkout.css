@@ -1,0 +1,132 @@
+.checkout {
+  padding: 6rem 1.5rem 4rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.checkout__content {
+  padding: 0;
+}
+
+.checkout__content--thanks {
+  text-align: center;
+}
+
+.checkout__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem;
+  color: var(--text);
+}
+
+.checkout__thanks-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  color: var(--text);
+}
+
+.checkout__thanks-text {
+  margin: 0 0 1.5rem;
+  color: var(--text-muted);
+}
+
+.checkout__empty {
+  margin: 0 0 1.5rem;
+  color: var(--text-muted);
+}
+
+.checkout__summary {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.checkout__list {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.checkout__item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.75rem 1rem;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.checkout__item:last-child {
+  border-bottom: none;
+}
+
+.checkout__item-name {
+  color: var(--text);
+}
+
+.checkout__item-meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.checkout__item-total {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.checkout__total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text);
+}
+
+.checkout__note {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 1.5rem;
+}
+
+.checkout__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.checkout__btn {
+  padding: 0.75rem 1.5rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+.checkout__btn--primary {
+  background: var(--logo);
+  color: var(--bg);
+}
+
+.checkout__btn--primary:hover {
+  opacity: 0.9;
+}
+
+.checkout__btn--secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.checkout__btn--secondary:hover {
+  border-color: var(--text-muted);
+}
+
+@media (min-width: 768px) {
+  .checkout {
+    padding: 8rem 2rem 5rem;
+  }
+}

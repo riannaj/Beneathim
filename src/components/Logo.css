@@ -1,0 +1,19 @@
+.logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--logo);
+}
+
+.logo__img {
+  width: 88px;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .logo__img {
+    width: 104px;
+  }
+}
