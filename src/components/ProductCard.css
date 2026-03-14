@@ -26,7 +26,11 @@
 .product-card__add {
   width: 100%;
   margin-top: 0.75rem;
-  padding: 0.7rem 1rem;
+  padding: 0.85rem 1rem;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: var(--logo);
   color: var(--bg);
   border: none;

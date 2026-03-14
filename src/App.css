@@ -9,6 +9,12 @@
   padding-top: 1rem;
 }
 
+@media (max-width: 767px) {
+  .app__main {
+    margin-left: 0;
+  }
+}
+
 @media (min-width: 768px) {
   .app__main {
     margin-left: 220px;
@@ -16,10 +22,16 @@
 }
 
 .footer {
-  padding: 2.5rem 1.5rem;
+  padding: 2rem 1rem;
   border-top: 1px solid var(--border);
   text-align: center;
   margin-top: auto;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 2.5rem 1.5rem;
+  }
 }
 
 .footer__links {

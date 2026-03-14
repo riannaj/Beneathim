@@ -51,3 +51,13 @@ img {
   height: auto;
   display: block;
 }
+
+@media (max-width: 767px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}

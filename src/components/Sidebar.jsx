@@ -7,18 +7,36 @@ const CATEGORIES = [
   { label: 'Caps', id: 'caps' },
 ]
 
-export default function Sidebar({ selectedCategory, onSelectCategory }) {
+export default function Sidebar({ selectedCategory, onSelectCategory, open, onClose }) {
   const handleCategoryClick = (id) => {
     onSelectCategory(id)
+    onClose?.()
     const shop = document.getElementById('shop')
     if (shop) shop.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
-    <aside className="sidebar" aria-label="Category menu">
-      <div className="sidebar__logo">
-        <Logo />
-      </div>
+    <>
+      <div
+        className={`sidebar__backdrop ${open ? 'sidebar__backdrop--open' : ''}`}
+        onClick={onClose}
+        onKeyDown={(e) => e.key === 'Escape' && onClose?.()}
+        role="button"
+        tabIndex={0}
+        aria-label="Close menu"
+      />
+      <aside className={`sidebar ${open ? 'sidebar--open' : ''}`} aria-label="Category menu">
+        <button
+          type="button"
+          className="sidebar__close"
+          onClick={onClose}
+          aria-label="Close menu"
+        >
+          ×
+        </button>
+        <div className="sidebar__logo">
+          <Logo />
+        </div>
       <nav className="sidebar__nav">
         <ul className="sidebar__list">
           <li>
@@ -44,5 +62,6 @@ export default function Sidebar({ selectedCategory, onSelectCategory }) {
         </ul>
       </nav>
     </aside>
+    </>
   )
 }

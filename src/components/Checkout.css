@@ -1,7 +1,13 @@
 .checkout {
-  padding: 6rem 1.5rem 4rem;
+  padding: 5rem 1rem 3rem;
   max-width: 520px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .checkout {
+    padding: 6rem 1.5rem 4rem;
+  }
 }
 
 .checkout__content {

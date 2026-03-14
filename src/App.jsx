@@ -12,6 +12,7 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState(null)
   const [showCheckout, setShowCheckout] = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(false)
   const [unlocked, setUnlocked] = useState(false)
 
   useEffect(() => {
@@ -24,12 +25,18 @@ export default function App() {
 
   return (
     <CartProvider>
-      <Sidebar selectedCategory={selectedCategory} onSelectCategory={setSelectedCategory} />
+      <Sidebar
+        selectedCategory={selectedCategory}
+        onSelectCategory={setSelectedCategory}
+        open={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
       <div className="app__main">
         <Header
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
           onOpenCheckout={() => setShowCheckout(true)}
+          onOpenMenu={() => setSidebarOpen(true)}
         />
         <main>
           {showCheckout ? (

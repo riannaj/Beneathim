@@ -18,6 +18,16 @@ export default function Header({ searchQuery, setSearchQuery, onOpenCheckout }) 
   return (
     <>
       <header className="header">
+        <button
+          type="button"
+          className="header__menu-btn"
+          onClick={() => onOpenMenu?.()}
+          aria-label="Open menu"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
         <div className="header__right">
           <div className="header__search-wrap">
             <span className="header__icon header__icon--search" aria-hidden>
