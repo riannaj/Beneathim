@@ -3,7 +3,7 @@ import { useCart } from '../context/CartContext'
 import Cart from './Cart'
 import './Header.css'
 
-export default function Header({ searchQuery, setSearchQuery, onOpenCheckout }) {
+export default function Header({ searchQuery, setSearchQuery, onOpenCheckout, onOpenMenu }) {
   const [cartOpen, setCartOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const searchInputRef = useRef(null)
